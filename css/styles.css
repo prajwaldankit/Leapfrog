@@ -1,0 +1,29 @@
+*{
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+
+table{
+    border: 2px solid green;
+    border-collapse: collapse;
+} 
+
+td, th{
+    border: 1px solid black;
+}
+
+table {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    font-size: 20px;
+}
