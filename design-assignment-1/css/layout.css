@@ -79,6 +79,7 @@
 /* *************************************** css for body ****************************************/
 .body-wrapper {
     width: 100%;
+    background-color: #f3f3f3;
 }
 
 .main-body {
@@ -87,7 +88,6 @@
 }
 
 .overview-wrapper {
-    background-color: #f3f3f3;
 }
 
 .overview-head {
