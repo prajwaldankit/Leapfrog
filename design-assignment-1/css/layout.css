@@ -83,11 +83,13 @@
 }
 
 .main-body {
-    width: 1170px;
+    /* width: 1170px; */
     margin: 0 auto;
 }
 
 .overview-wrapper {
+    width: 1170px;
+    margin: 0 auto;
 }
 
 .overview-head {
@@ -155,16 +157,26 @@
 .main li {
     float: left;
 }
-.our-clients-head{
+
+.our-clients-head {
     width: 1170px;
 }
-.our-motto{
-    width: 100%;
+
+.our-motto {
+    width: 1170px;
+    margin: 0 auto;
 }
-.our-clients li{
+
+.our-clients {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.our-clients li {
     float: left;
     margin-left: 5px;
 }
+
 .client-image {
     width: 170px;
     height: 90px;
@@ -172,17 +184,23 @@
     background-repeat: no-repeat;
 }
 
+.our-team-background-color {
+    background-color: #ECECEC;
+    height: 380px;
+    width: 100%;
+}
+
 .our-team-wrapper {
     width: 1170px;
     /* width: 100%; */
     margin: 0 auto 0 auto;
     text-align: center;
+    padding-top: 100px;
     /* align-content: center; */
 }
-
 .team-info-wrapper {
     /* width: 100%; */
-
+    margin-top: 50px;
 }
 
 .team-card-wrapper {
@@ -198,6 +216,7 @@
 .team-card-background {
     /* background-image: url("../images/no-image.png"); */
 }
+
 .team-card-foreground {
     display: none;
     /* display: block; */
@@ -205,17 +224,20 @@
     height: 314px;
     padding: 37px 35px 15px 38px;
     background-image: url("../images/background-on-hover.png");
-    background-repeat: no-repeat ;
+    background-repeat: no-repeat;
 }
-.team-card-foreground .card-info{
+
+.team-card-foreground .card-info {
     text-align: left;
     width: 224px;
 }
-.team-card-foreground li{
+
+.team-card-foreground li {
     list-style: none;
     margin: 10px 5px;
     float: left;
 }
+
 .team-card-wrapper-l {
     margin-right: 30px;
 }
@@ -250,23 +272,27 @@
     width: 200px;
     height: 54px;
     background-image: url("../images/card-name-bg.png");
-    background-repeat: no-repeat ;
+    background-repeat: no-repeat;
 }
-.team-card-wrapper:hover{
+
+.social-media-links:hover {
     cursor: pointer;
 }
-.team-card-wrapper:hover .team-card-name{
-    
+
+.team-card-wrapper:hover .team-card-name {
+
     background-image: url("../images/card-name-bg-hover.png");
-    background-repeat: no-repeat ;
+    background-repeat: no-repeat;
 }
-.team-card-wrapper:hover .team-card-foreground{
+
+.team-card-wrapper:hover .team-card-foreground {
     display: block;
-    
+
     /* background-image: url("../images/background-on-hover.png"); */
-    background-repeat: no-repeat ;
+    background-repeat: no-repeat;
 }
-.name{
+
+.name {
     position: relative;
     /* top: 12px;
     left: 66px; */
@@ -277,10 +303,11 @@
     font-size: 22px;
 
 }
+
 /* *************************************** css for footer *************************************** */
 .footer-wrapper {
     background-color: #76c7c1;
-    
+
 }
 
 .footer-top-wrapper {
@@ -303,7 +330,7 @@
     width: 1170px;
     /* height: 50px; */
     margin: 0 auto;
-   
+
 }
 
 .footer-bottom li {
