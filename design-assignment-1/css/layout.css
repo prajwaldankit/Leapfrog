@@ -1,0 +1,259 @@
+.whole-wrapper {
+    /* width: 100%; */
+    /* background-color: #f3f3f3; */
+    /* background-color: red; */
+}
+
+.body-wrapper {
+    /* width: 1170px; */
+    /* margin: 0 auto; */
+
+}
+
+/* *************************************** css for header ****************************************/
+
+.header-wrapper {
+    /* width: 1160px; */
+    /* margin: 0 auto; */
+}
+
+.header-top-wrapper {
+    /* width: 1160px; */
+    /* padding: 0 auto; */
+    background-color: #76c7c1;
+}
+
+.header-top {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.header-bottom {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.header-bottom-wrapper {
+    /* width: 1160px; */
+    /* margin: 0 auto; */
+    background-color: #ececec;
+    /* background-color: green; */
+}
+
+.logo-wrapper {
+    float: left;
+}
+
+.header-menu {
+    float: right;
+}
+
+.nav-wrapper {
+    float: left;
+}
+
+.nav li {
+    float: left;
+}
+
+.search-wrapper {
+    float: right;
+}
+
+.search-form {
+    display: none;
+}
+
+.current-page {
+    float: left;
+}
+
+.nav-links li {
+    float: left;
+}
+
+.nav-links {
+    float: right;
+}
+
+/* *************************************** css for body ****************************************/
+.body-wrapper {
+    width: 100%;
+}
+
+.main-body {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.overview-wrapper {
+    background-color: #f3f3f3;
+}
+
+.overview-head {
+    width: 1140px;
+    text-align: justify;
+}
+
+.overview .col3-left .left-container {
+    width: 310px;
+    float: left;
+}
+
+.overview .col3-left .right-container {
+    float: right;
+    /* width: 310px; */
+}
+
+.right-container .main {
+    float: left;
+    width: 550px;
+}
+
+.graph {
+    margin: 5px;
+}
+
+.graph-value {
+    color: red;
+}
+
+.graph-1 {
+    width: 124px;
+    height: 60px;
+    background-image: url("../images/meter1.png");
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.graph-2 {
+    width: 124px;
+    height: 60px;
+    background-image: url("../images/meter2.png");
+    background-repeat: no-repeat;
+}
+
+.graph-3 {
+    width: 124px;
+    height: 60px;
+    background-image: url("../images/meter3.png");
+    background-repeat: no-repeat;
+}
+
+.graph-4 {
+    width: 124px;
+    height: 60px;
+    background-image: url("../images/meter4.png");
+    background-repeat: no-repeat;
+}
+
+.right-container .right {
+    float: right;
+    width: 274px;
+}
+
+.main li {
+    float: left;
+}
+.our-clients li{
+    float: left;
+    margin-left: 5px;
+}
+.client-image {
+    width: 170px;
+    height: 90px;
+    background-image: url("../images/client-image.png");
+    background-repeat: no-repeat;
+}
+
+/* *************************************** css for footer *************************************** */
+.footer-wrapper {
+    background-color: #76c7c1;
+    
+}
+
+.footer-top-wrapper {
+    width: 1167px;
+    margin: 0 auto;
+}
+
+.footer-bottom-wrapper {
+    background-color: #6bb4ad;
+}
+
+.footer-top {
+    width: 1170px;
+    float: left;
+    padding-top: 50px;
+    padding-bottom: 45px;
+}
+
+.footer-bottom {
+    width: 1170px;
+    /* height: 50px; */
+    margin: 0 auto;
+   
+}
+
+.footer-bottom li {
+    float: left;
+}
+
+.intro {
+    width: 395px;
+    /* margin-right: 5px; */
+    float: left;
+}
+
+.information {
+    float: left;
+}
+
+.company {
+    width: 202px;
+    /* margin-right: 5px; */
+    float: left;
+}
+
+.community {
+    width: 198px;
+    /* margin-right: 5px; */
+    float: left;
+}
+
+.blog-links {
+    /* height: 100px; */
+    width: 375px;
+    /* margin-right: 5px; */
+    /* background-color: red; */
+    float: left;
+}
+
+.blog-link {
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.blog-thumbnail {
+    width: 70px;
+    height: 70px;
+    margin-right: 18px;
+    background-image: url("../images/blog-thumbnail.png");
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.blog-data {
+    /* float: right; */
+    width: 170px;
+}
+
+.copyright {
+    float: left;
+    margin: 22px 0px 18px 0px;
+}
+
+.social-media-links {
+    float: right;
+    margin: 13px 0;
+}
