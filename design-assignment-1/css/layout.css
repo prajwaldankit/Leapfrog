@@ -25,11 +25,13 @@
 
 .header-top {
     width: 1160px;
+    height: 80px;
     margin: 0 auto;
 }
 
 .header-bottom {
     width: 1160px;
+    height: 80px;
     margin: 0 auto;
 }
 
@@ -96,7 +98,9 @@
     width: 1140px;
     text-align: justify;
 }
-
+.overview-head h2{
+    color: #cf463c;
+}
 .overview .col3-left .left-container {
     width: 310px;
     float: left;
@@ -189,7 +193,10 @@
     height: 380px;
     width: 100%;
 }
-
+.our-team-container{
+    /* height: fit-content; */
+    margin-bottom: 217px;
+}
 .our-team-wrapper {
     width: 1170px;
     /* width: 100%; */
@@ -201,6 +208,7 @@
 .team-info-wrapper {
     /* width: 100%; */
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .team-card-wrapper {
@@ -302,6 +310,16 @@
     color: white;
     font-size: 22px;
 
+}
+.our-motto{
+    width: 938px;
+    margin: 30px auto 20px auto;
+    text-align: center;
+}
+.our-motto h2{
+    margin-top: 50px;
+    line-height: 50px;
+    color: #cf463c;
 }
 
 /* *************************************** css for footer *************************************** */
