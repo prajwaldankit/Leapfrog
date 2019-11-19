@@ -1,0 +1,78 @@
+header.container {
+    background: white;
+}
+
+header .content nav {
+    color: #3f4244;
+}
+
+header .content nav a {
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+header .content nav a:hover {
+    background-image: linear-gradient(#6cfec6, #43d6cd);
+    border-radius: 5px;
+    color: white;
+}
+
+.hero .container {
+    background-image: linear-gradient(#6cfec6, #43d6cd);
+}
+
+.hero .content {
+    color: white;
+    height: 43.75em;
+}
+
+.hero .content h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 60px;
+}
+
+.hero .content button {
+    background-image: linear-gradient(#ff6c54, #ff3558);
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.services .container {
+    background: white;
+}
+
+.services .content {
+    background: white;
+
+}
+
+.service figcaption {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 54px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(63, 66, 68);
+
+}
+
+.service p {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(146, 155, 160);
+    text-align: center;
+}
+
+.services .content button {
+    background-image: linear-gradient(#ff6c54, #ff3558);
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: white;
+}

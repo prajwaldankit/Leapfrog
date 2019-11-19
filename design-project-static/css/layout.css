@@ -1,0 +1,62 @@
+header .content {
+    /* line-height: 100px; */
+}
+
+header .content .logo {
+    float: left;
+    padding: 36px 0 36px 0;
+}
+
+header .content .logo a {
+    display: block;
+}
+
+header .content nav {
+    float: right;
+    padding: 40px 0 41px 0;
+    text-transform: uppercase;
+}
+
+header .content nav a {
+    padding: 17px 26px;
+    margin-left: 0 5px;
+}
+
+.hero .content button {
+    display: block;
+    width: 250px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.hero .content button:hover {
+    cursor: pointer;
+}
+
+.services .content {
+    height: 600px;
+    
+}
+
+.services .service {
+    float: left;
+}
+.service-wrapper{
+    width: 100%;
+}
+
+.service-wrapper .service {
+    width: 25%;
+}
+
+.service figure img{
+    display: block;
+    margin: 0 auto;
+}
+
+.services .content button {
+    display: block;
+    width: 250px;
+    height: 70px;
+    margin: 0 auto;
+}
