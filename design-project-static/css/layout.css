@@ -22,11 +22,12 @@ header .content nav li {
     /* margin-left: 0 5px; */
 }
 
-header .content nav li a{
+header .content nav li a {
     display: block;
     height: 100%;
     width: 100%;
 }
+
 /* ************************************************************* */
 .hero .content {
     padding-top: 270px;
@@ -57,6 +58,7 @@ header .content nav li a{
     line-height: 70px;
     width: 100%;
 }
+
 /* ************************************************************* */
 .services .content {
     /* height: 600px; */
@@ -117,4 +119,8 @@ header .content nav li a{
     line-height: 70px;
     width: 100%;
 }
+
 /* ************************************************************* */
+.browser-add .container {
+    background-image: linear-gradient(#ff6c54, #ff3558);
+}
