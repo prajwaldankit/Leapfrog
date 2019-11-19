@@ -6,25 +6,43 @@ header .content nav {
     color: #3f4244;
 }
 
+header .content nav li {
+    float: left;
+    margin-right: 5px;
+}
+
+header .content nav li:nth-last-child(1) {
+    margin-right: 0px;
+}
+
 header .content nav a {
     text-align: center;
     font-weight: 400;
     font-size: 15px;
+    color: rgb(63, 66, 68);
 }
 
-header .content nav a:hover {
+header .content .active {
     background-image: linear-gradient(#6cfec6, #43d6cd);
     border-radius: 5px;
     color: white;
 }
 
+header .content nav li:hover {
+    background-image: linear-gradient(#6cfec6, #43d6cd);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ************************************************************* */
 .hero .container {
     background-image: linear-gradient(#6cfec6, #43d6cd);
 }
 
 .hero .content {
     color: white;
-    height: 43.75em;
+    /* height: 43.75em; */
 }
 
 .hero .content h1 {
@@ -33,23 +51,29 @@ header .content nav a:hover {
     font-size: 60px;
 }
 
-.hero .content button {
+.hero .content .btn {
     background-image: linear-gradient(#ff6c54, #ff3558);
     font-size: 15px;
     border: none;
     border-radius: 10px;
-    color: white;
+    /* color: white; */
     text-transform: uppercase;
 }
 
+.hero .content .btn a {
+    font-size: 15px;
+    color: white;
+}
+
+/* ************************************************************* */
 .services .container {
     background: white;
 }
 
-.services .content {
-    background: white;
-
+.service:hover {
+    cursor: pointer;
 }
+
 
 .service figcaption {
     font-size: 15px;
@@ -58,7 +82,6 @@ header .content nav a:hover {
     text-align: center;
     text-transform: uppercase;
     color: rgb(63, 66, 68);
-
 }
 
 .service p {
@@ -68,7 +91,19 @@ header .content nav a:hover {
     text-align: center;
 }
 
-.services .content button {
+.service:hover {
+    background: grey;
+}
+
+.service:hover figcaption {
+    color: black;
+}
+
+.service:hover p {
+    color: black;
+}
+
+.services .content .btn {
     background-image: linear-gradient(#ff6c54, #ff3558);
     font-size: 15px;
     border: none;
@@ -76,3 +111,10 @@ header .content nav a:hover {
     text-transform: uppercase;
     color: white;
 }
+
+.services .content .btn a {
+    font-size: 15px;
+    color: white;
+}
+
+/* ************************************************************* */

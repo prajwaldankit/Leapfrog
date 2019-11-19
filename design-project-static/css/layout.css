@@ -17,46 +17,104 @@ header .content nav {
     text-transform: uppercase;
 }
 
-header .content nav a {
+header .content nav li {
     padding: 17px 26px;
-    margin-left: 0 5px;
+    /* margin-left: 0 5px; */
 }
 
-.hero .content button {
+header .content nav li a{
     display: block;
-    width: 250px;
+    height: 100%;
+    width: 100%;
+}
+/* ************************************************************* */
+.hero .content {
+    padding-top: 270px;
+    padding-bottom: 250px;
+}
+
+.hero .content h1 {
+    line-height: 163px;
+}
+
+.hero .content .btn {
+    /* display: block; */
+    width: 15.625em;
     height: 70px;
     margin: 0 auto;
 }
 
-.hero .content button:hover {
+.hero .content .btn:hover {
     cursor: pointer;
 }
 
+.hero .content .btn {
+    text-align: center;
+    /* color: white; */
+}
+
+.hero .content .btn a {
+    line-height: 70px;
+    width: 100%;
+}
+/* ************************************************************* */
 .services .content {
-    height: 600px;
-    
+    /* height: 600px; */
+    padding-top: 85px;
+    padding-bottom: 85px;
 }
 
 .services .service {
+    display: block;
+    float: left;
+    height: 100%;
+}
+
+.service-wrapper {
+    padding-bottom: 84px;
+}
+
+.service-wrapper ul li {
+    width: 23.076923%;
+    margin-right: 30px;
     float: left;
 }
-.service-wrapper{
-    width: 100%;
+
+.service-wrapper ul li:nth-last-child(1) {
+    margin-right: 0px;
 }
 
-.service-wrapper .service {
-    width: 25%;
-}
-
-.service figure img{
+.service figure img {
     display: block;
     margin: 0 auto;
+    padding-bottom: 27px;
 }
 
-.services .content button {
+.service figcaption {
+    padding-bottom: 50px;
+}
+
+.service p {
+    padding-bottom: 65px;
+}
+
+.services .content .btn {
     display: block;
-    width: 250px;
+    width: 15.625em;
     height: 70px;
     margin: 0 auto;
 }
+
+.services .content .btn:hover {
+    cursor: pointer;
+}
+
+.services .content .btn {
+    text-align: center;
+}
+
+.services .content .btn a {
+    line-height: 70px;
+    width: 100%;
+}
+/* ************************************************************* */

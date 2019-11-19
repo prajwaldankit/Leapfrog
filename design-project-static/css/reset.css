@@ -3,7 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -29,5 +29,8 @@
 
 a {
     text-decoration: none;
-    text-decoration: inherit;
+    /* text-decoration: inherit; */
+}
+li{
+    list-style-type: none;
 }
