@@ -34,3 +34,6 @@ a {
 li{
     list-style-type: none;
 }
+img{
+    display: block;
+}
