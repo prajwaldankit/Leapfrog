@@ -135,9 +135,69 @@ header .content nav li:hover {
     font-weight: 400;
     color: rgb(63, 66, 68);
 }
-.phone-add .content .info p{
+
+.phone-add .content .info p {
     font-size: 17px;
     font-weight: 300;
     text-align: left;
     color: rgb(146, 155, 160);
+}
+
+.phone-add .content .btn {
+    background-image: linear-gradient(#ff6c54, #ff3558);
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.phone-add .content .btn a {
+    font-size: 20px;
+    color: white;
+}
+
+/* ************************************************************** */
+.portfolio .container {
+    background-image: linear-gradient(#6cfec6, #43d6cd);
+}
+
+.portfolio .content {
+    color: white;
+    text-align: center;
+    /* height: 43.75em; */
+}
+
+.portfolio .content h2 {
+    font-weight: 300;
+    font-size: 60px;
+}
+
+.portfolio .content .tabs a {
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgb(63, 66, 68);
+}
+
+.portfolio .content .tabs a:hover {
+    color: white;
+}
+.portfolio .content .tabs ul .active a{
+    color: white;
+}
+.portfolio .works>ul li{
+    background: white;
+}
+.portfolio .works>ul li figcaption{
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(63, 66, 68);
+}
+.portfolio .works>ul li p {
+    font-size: 13px;
+    color: rgb(146, 155, 160);
+}
+.portfolio .works>ul li:hover {
+    color: black;
 }
