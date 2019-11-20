@@ -423,7 +423,7 @@ header .content nav li:hover {
     color: white;
 }
 
-.contact .content form ..email::-webkit-input-placeholder {
+.contact .content form .email::-webkit-input-placeholder {
     /* Edge */
     color: white;
 }
