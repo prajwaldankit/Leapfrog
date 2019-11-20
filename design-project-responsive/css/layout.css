@@ -1,0 +1,645 @@
+header .content {
+    /* line-height: 100px; */
+}
+
+header .content .logo {
+    float: left;
+    padding: 36px 0 36px 0;
+}
+
+header .content .logo a {
+    display: block;
+}
+
+header .content nav {
+    float: right;
+    padding: 24px 0 24px 0;
+    text-transform: uppercase;
+}
+
+header .content nav li {
+    float: left;
+    margin-right: 5px;
+}
+
+header .content nav li:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+header .content nav li a {
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    padding: 17px 26px;
+}
+
+/* ************************************************************* */
+.hero .content {
+    padding-top: 258px;
+    padding-bottom: 250px;
+}
+
+.hero .content h1 {
+    /* line-height: 163px; */
+    padding-bottom: 54px;
+}
+
+.hero .content .btn {
+    /* display: block; */
+    width: 15.625em;
+    /* height: 70px; */
+    margin: 0 auto;
+}
+
+.hero .content .btn:hover {
+    cursor: pointer;
+}
+
+.hero .content .btn {
+    text-align: center;
+    /* color: white; */
+}
+
+.hero .content .btn a {
+    display: block;
+    line-height: 70px;
+    width: 100%;
+    height: 100%;
+}
+
+/* ************************************************************* */
+.services .content {
+    /* height: 600px; */
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.services .service {
+    display: block;
+    float: left;
+    height: 100%;
+}
+
+.service-wrapper ul li {
+    width: 23.076923%;
+    margin-right: 30px;
+    float: left;
+}
+
+.service-wrapper ul li:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+.service figure img {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 21px;
+}
+
+.service h2 {
+    padding-bottom: 40px;
+}
+
+.service p {
+    padding-bottom: 88px;
+}
+
+.services .content .btn {
+    display: block;
+    width: 15.625em;
+    /* height: 70px; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services .content .btn a {
+    display: block;
+    line-height: 70px;
+    width: 100%;
+    height: 100%;
+}
+
+/* ************************************************************* */
+.browser-add .container {
+    background-image: linear-gradient(#ff6c54, #ff3558);
+    position: relative;
+}
+
+.browser-add .content {
+    padding-top: 81px;
+    text-align: center;
+    color: white;
+}
+
+.browser-add .content .heading {
+    width: 65.8119%;
+    padding-bottom: 38px;
+    margin: 0 auto;
+}
+
+.browser-add .content h2 {
+    padding-bottom: 32px;
+}
+
+.browser-add .content p {
+    padding-bottom: 200px;
+}
+
+.browser-add .content .browser-images {
+    /* display: block; */
+    width: 60.875em;
+    margin: 0 auto;
+}
+
+.browser-add .content .browser-images .left {
+    float: left;
+}
+
+.browser-add .content .browser-images .right {
+    float: right;
+}
+
+.browser-add .content .browser-images .middle {
+    position: absolute;
+    z-index: 10;
+    bottom: -5px;
+    right: 33%;
+}
+
+
+/* ************************************************************* */
+.phone-add .container {
+    /* background: red; */
+}
+
+.phone-add .content {
+    padding-top: 140px;
+}
+
+.phone-add .content .phone-images {
+    /* width: 24%; */
+    float: left;
+    position: relative;
+}
+
+.phone-add .content .phone-images .small {
+    float: right;
+    position: absolute;
+    left: 321px;    
+}
+
+.phone-add .content .phone-images .big {
+    position: absolute;
+    left: 158px;
+    top: -72px;
+    z-index: 10;
+}
+
+.phone-add .content .info {
+    width: 48.717948%;
+    float: right;
+    padding-bottom: 114px;
+}
+
+.phone-add .content .info h2 {
+    padding-bottom: 44px;
+}
+.phone-add .content .info p {
+    padding-bottom: 80px;
+}
+
+.phone-add .content .btn {
+    display: block;
+    width: 15.625em;
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.phone-add .content .btn a {
+    display: block;
+    line-height: 70px;
+    width: 100%;
+    height: 100%;
+}
+
+/* ************************************************************* */
+.portfolio .content {
+    padding-top: 50px;
+    padding-bottom: 66px;
+}
+
+.portfolio .content .heading {
+    width: 65.8119%;
+    margin: 0 auto;
+}
+
+.portfolio .content .heading h2 {
+    font-size: 40px;
+    line-height: 112px;
+}
+
+.portfolio li {
+    float: left;
+}
+
+.portfolio .content .tabs {
+    /* float: right; */
+    /* width: auto; */
+    padding: 94px 0 19px 0;
+    text-transform: uppercase;
+    /* margin: 0 auto; */
+}
+
+.portfolio .content .tabs ul {
+    display: inline-block;
+    /* width: 48.7179%; */
+    margin: 0 auto;
+    /* text-align: center; */
+    height: auto;
+}
+
+.portfolio .content .tabs li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 17px 26px;
+}
+
+.portfolio .works>ul li {
+    display: block;
+    width: 31.6239%;
+    margin: 0 30px 30px 0;
+}
+
+.portfolio .works>ul li:nth-child(3),
+.portfolio .works>ul li:nth-child(6) {
+    margin: 0 0px 30px 0;
+}
+
+.portfolio .works>ul li h2 {
+    line-height: 55px;
+    text-transform: uppercase;
+}
+
+.portfolio .works>ul li p {
+    padding: 3px 0 16px 0;
+    width: 60%;
+    margin: 0 auto 11px auto;
+}
+
+.portfolio .content .works>figure {
+    display: inline-block;
+    margin-top: 26px;
+}
+
+.portfolio .content .works>figure a {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* ************************************************************* */
+.stats .content {
+    padding-top: 82px;
+}
+
+.stats .content li {
+    display: inline-block;
+    float: left;
+    width: 23.0769%;
+    margin-right: 30px;
+}
+
+.stats .content li img {
+    margin: 0 auto;
+}
+
+.stats .content li:nth-last-child(1) {
+    margin-right: 0px;
+
+}
+
+.stats .content li .number,
+.stats .content li .context {
+    display: block;
+}
+
+.stats .content li>a {
+    display: block;
+    text-align: center;
+}
+
+.stats .content li .number {
+    line-height: 90px;
+}
+
+.stats .content li .context {
+    padding-bottom: 87px;
+    text-transform: uppercase;
+}
+
+/* ************************************************************* */
+.team .content {
+    padding-top: 40px;
+    padding-bottom: 56px;
+}
+
+.team .content .heading {
+    width: 65.6410%;
+    margin: 0 auto;
+    margin-bottom: 98px;
+}
+
+.team .content .heading h2 {
+    line-height: 113px;
+    text-align: center;
+}
+
+.team .content .heading p {
+    text-align: center;
+}
+
+.team .content>ul li {
+    float: left;
+    width: 23.0769%;
+    margin-right: 30px;
+}
+
+.team .content>ul li:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.team .content .member .details {
+    display: block;
+    text-align: center;
+    padding-top: 21px;
+}
+
+.team .content .member .details .name {
+    line-height: 38px;
+}
+
+.team .content .member .details .post {
+    padding-bottom: 30px;
+}
+
+.team .content .member .details .info {
+    padding-bottom: 14px;
+    width: 82%;
+    margin: 0 auto;
+}
+
+/* ************************************************************* */
+.quotes .content {
+    padding-top: 96px;
+    padding-bottom: 95px;
+    text-align: center;
+}
+
+.quotes .content>figure {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.quotes .content .quote .a-quote {
+    display: block;
+    line-height: 41px;
+}
+
+.quotes .content .quote .name {
+    display: block;
+}
+
+.quotes .content .quote .navigation {
+    padding-top: 48px;
+    width: 8.1196%;
+    margin: 0 auto;
+}
+
+.quotes .content .quote .navigation .next {
+    float: right;
+}
+
+.quotes .content .quote .navigation figure {
+    display: inline-block;
+}
+
+/* ************************************************************* */
+
+.newsletter .content {
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 96px;
+}
+
+.newsletter .content h2 {
+    line-height: 106px;
+}
+
+.newsletter .content .btn {
+    height: 50px;
+    width: 170px;
+    margin: 0 auto;
+}
+
+.newsletter .content a {
+    display: block;
+    line-height: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+/* ************************************************************* */
+.about .content {
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+.about .content figure {
+    width: 48.7179%;
+    float: left;
+}
+
+.about .content .info {
+    width: 48.7179%;
+    float: right;
+}
+
+.about .content .info h2 {
+    padding-left: 5px;
+    line-height: 91px;
+}
+
+.about .content .info p {
+    padding-top: 6px;
+}
+
+/* ************************************************************* */
+.modern-design .content {
+    padding-top: 190px;
+    padding-bottom: 165px;
+    position: relative;
+}
+
+.modern-design .content figure {
+    float: left;
+    position: absolute;
+    bottom: -41px;
+    left: 149px;
+}
+
+.modern-design .content .info {
+    float: right;
+    width: 57.2649%;
+    padding-right: 5px;
+}
+
+.modern-design .content .info h1 {
+    line-height: 58px;
+}
+
+.modern-design .content .info .context {
+    display: block;
+    padding-bottom: 27px;
+}
+
+/* ************************************************************* */
+.clients .content {
+    padding-top: 72px;
+    padding-bottom: 61px;
+}
+
+.clients .content .heading {
+    width: 65.6410%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.clients .content .heading h2 {
+    line-height: 119px;
+    text-align: center;
+}
+
+.clients .content .heading p {
+    text-align: center;
+}
+
+.clients .content>ul li {
+    padding-top: 32px;
+    float: left;
+    width: 31.6239%;
+    margin-right: 30px;
+}
+
+.clients .content>ul li:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.clients .content .client {
+    display: block;
+    text-align: center;
+
+}
+
+.clients .content .client .name {
+    line-height: 44px;
+}
+
+.clients .content .client .post {
+    padding-bottom: 30px;
+}
+
+.clients .content .client .info {
+    padding-bottom: 67px;
+    width: 79.2592%;
+    margin: 0 auto;
+}
+
+/* ************************************************************* */
+.contact .content {
+    padding-top: 40px;
+    padding-bottom: 90px;
+    text-align: center;
+}
+
+.contact .content .heading {
+    width: 65.8119%;
+    padding-bottom: 100px;
+    margin: 0 auto;
+}
+
+.contact .content .heading h2 {
+    line-height: 126px;
+}
+
+.contact .content .heading p {
+    margin-top: -5px;
+}
+
+.contact .content form {
+    width: 65.8119%;
+    margin: 0 auto;
+}
+
+.contact .content form .name {
+    width: 48.0519%;
+    line-height: 50px;
+    /* padding: 0 30px; */
+    float: left;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contact .content form .email {
+    width: 48.0519%;
+    margin-bottom: 88px;
+    line-height: 50px;
+    /* padding: 0 30px; */
+    float: right;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contact .content form .message {
+    width: 100%;
+    margin-bottom: 36px;
+    line-height: 50px;
+    /* padding: 0 30px; */
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contact .content form .btn {
+    float: right;
+    width: 170px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ************************************************************* */
+.location .content {
+    padding-top: 112px;
+}
+
+.location .content .info {
+    width: 31.6239%;
+    padding: 15px 50px 15px 50px;
+    float: right;
+}
+
+.location .content .info span {
+    line-height: 45px;
+}
+
+/* ************************************************************* */
+footer .container {
+    background: #233537;
+}
+
+footer .content {
+    text-align: center;
+    line-height: 99px;
+    padding-bottom: 8px;
+}
