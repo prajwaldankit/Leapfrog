@@ -646,13 +646,13 @@ footer .content {
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     .content {
-        max-width: 64em;
+        width: 48em;
         margin: 0 auto;
     }
 
     .container {
         width: 100%;
-        width: 64em;
+        max-width: 64em;
     }
 
     img {

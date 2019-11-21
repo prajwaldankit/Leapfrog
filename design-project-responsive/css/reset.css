@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
+    outline: 1px dotted red;
 }
 
 .clearfix:before,
