@@ -495,7 +495,7 @@ header .content nav li a {
     padding-right: 5px;
 }
 
-.modern-design .content .info h1 {
+.modern-design .content .info h2 {
     line-height: 58px;
 }
 
@@ -583,29 +583,29 @@ header .content nav li a {
 }
 
 .contact .content form .name {
-    width: 48.0519%;
+    width: 40.2509%;
     line-height: 50px;
-    /* padding: 0 30px; */
+    padding: 0 30px;
     float: left;
     font-size: 15px;
     font-weight: 500;
 }
 
 .contact .content form .email {
-    width: 48.0519%;
+    width: 40.2509%;
     margin-bottom: 88px;
     line-height: 50px;
-    /* padding: 0 30px; */
+    padding: 0 30px;
     float: right;
     font-size: 15px;
     font-weight: 500;
 }
 
 .contact .content form .message {
-    width: 100%;
+    width: 92.2077%;
     margin-bottom: 36px;
     line-height: 50px;
-    /* padding: 0 30px; */
+    padding: 0 30px;
     font-size: 15px;
     font-weight: 500;
 }
