@@ -185,7 +185,7 @@ header .content nav li a {
 .phone-add .content .phone-images .small {
     float: right;
     position: absolute;
-    left: 321px;    
+    left: 321px;
 }
 
 .phone-add .content .phone-images .big {
@@ -204,6 +204,7 @@ header .content nav li a {
 .phone-add .content .info h2 {
     padding-bottom: 44px;
 }
+
 .phone-add .content .info p {
     padding-bottom: 80px;
 }
@@ -645,89 +646,23 @@ footer .content {
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .content {
-        width: 48em;
-        margin: 0 auto;
-    }
-
     .container {
+        /* width: 100%; */
         width: 100%;
-        max-width: 64em;
+        width: 400px;
     }
-
-    img {
-        width: auto;
-        height: auto;
+    
+    .content {
+        width: 768px;
+        /* margin: 0 auto; */
     }
-
-    .services .content {
-        /* height: 600px; */
-        padding-top: 85px;
-        padding-bottom: 85px;
-    }
-
-    .services .service {
-        display: block;
-        /* float: left; */
-        height: 100%;
-    }
-
-    .service-wrapper ul li {
-        width: 46%;
-        margin-right: 20px;
-    }
-
-    .browser-add .content .browser-images {
-        width: 100%;
-        height: 180px;
-        margin: 0 auto;
-    }
-
-    .browser-add .content .browser-images .left {
+    .browser-add{
         display: none;
-    }
-
-    .browser-add .content .browser-images .right {
+    }   
+    .phone-add{
         display: none;
-    }
-
-    .browser-add .content .browser-images .middle {
-        position: absolute;
-        z-index: 10;
-        bottom: 2px;
-        right: 277px;
-    }
-
-    .phone-add .content .phone-images .big {
+    }   
+    .modern-design{
         display: none;
-    }
-
-    .phone-add .content .phone-images .small {
-        position: relative;
-        float: left;
-        left: 122px;
-    }
-
-    .phone-add .content .info {
-        width: 47.717948%;
-        float: right;
-        padding-right: 30px;
-        padding-bottom: 114px;
-    }
-
-    .portfolio .heading h2 {
-        font-size: 05px;
-    }
-
-    .portfolio .works>ul li {
-        float: left;
-        width: 50%;
-        margin: 0px;
-    }
-
-    .portfolio .works>ul li:nth-child(2),
-    .portfolio .works>ul li:nth-child(4),
-    .portfolio .works>ul li:nth-child(6) {
-        margin: 0;
-    }
+    }   
 }
