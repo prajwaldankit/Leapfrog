@@ -69,8 +69,8 @@ function drawNavigationButtons() {
   nextButton.style.top = '50%';
   nextButton.style.height = '64px';
   nextButton.style.width = '64px';
-  nextButton.style.backgroundColor = 'white';
-  nextButton.style.boxShadow = '0px 0px 8px #111';
+  // nextButton.style.backgroundColor = 'red';
+  // nextButton.style.boxShadow = '0px 0px 8px #111';
   nextButton.style.onMouseHover
   nextButton.src = './images/navigation/next.png';
 
@@ -80,8 +80,8 @@ function drawNavigationButtons() {
   prevButton.style.top = '50%';
   prevButton.style.height = '64px';
   prevButton.style.width = '64px';
-  prevButton.style.backgroundColor = 'white';
-  prevButton.style.boxShadow = '0px 0px 20px #111';
+  // prevButton.style.backgroundColor = 'white';
+  // prevButton.style.boxShadow = '0px 0px 20px #111';
   prevButton.src = './images/navigation/prev.png';
 
   nextButton.addEventListener('click', function () { nextImage() });
@@ -100,7 +100,7 @@ function drawPositionButtons() {
   buttons.style.textAlign = 'center';
   var ul = document.createElement('ul');
 
-  for (let i = 1; i <= totalData; i++) {
+  for (var i = 1; i <= totalData; i++) {
     var li = document.createElement('li');
     li.style.height = '25px';
     li.style.width = '25px';
@@ -143,3 +143,7 @@ function prevImage() {
 }
 
 initCarousel();
+
+setInterval(function () {
+  nextImage();
+}, 3000)
