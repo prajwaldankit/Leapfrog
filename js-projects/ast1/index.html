@@ -6,22 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <title>Assignment 1: Image Carousel</title>
 </head>
 
 <body>
 
   <h1>Image Carousel</h1>
-  
+
+  <div class="carousel-container">
+    <div class="carousel-image-wrapper">
+      <img src="images/image1.jpg" alt="image 1">
+      <img src="images/image2.jpg" alt="image 1">
+      <img src="images/image3.jpg" alt="image 1">
+      <img src="images/image4.jpg" alt="image 1">
+      <img src="images/image5.jpg" alt="image 1">
+    </div>
+  </div>
+
   <div class="carousel-container">
     <div class="carousel-image-wrapper">
       <img src="images/image1.jpg" alt="image 1">
       <img src="images/image2.jpg" alt="image 1">
     </div>
   </div>
-  
-  <!-- <script src="script.js"></script> -->
-  <script src="try.js"></script>
+
+  <div class="carousel-container">
+    <div class="carousel-image-wrapper">
+      <img src="images/image1.jpg" alt="image 1">
+      <img src="images/image2.jpg" alt="image 1">
+      <img src="images/image3.jpg" alt="image 1">
+    </div>
+  </div>
+  <script>
+    var carouselContainers = document.getElementsByClassName('carousel-container');
+
+    Array.prototype.forEach.call(carouselContainers, function (carouselContainer) {
+      carouselContainer = new Carousel(carouselContainer).init(1280, 720);
+    });
+  </script>
 </body>
 
 </html>

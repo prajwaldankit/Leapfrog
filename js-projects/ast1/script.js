@@ -1,149 +1,150 @@
-var carouselWrapper = document.getElementsByClassName('carousel-image-wrapper')[0];
-var carouselWidth = 1280;
-var carouselHeight = 720;
-var currentCarouselIndex = 1;
-var currentCarouselPositionLeft = 0;
-var carouselData = ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg', 'images/image4.jpg', 'images/image5.jpg'];
-var totalData = 0;
-var carouselElement = document.createElement('ul');
+function Carousel(carouselContainer) {
+  this.container = carouselContainer;
+  this.wrapper = this.container.getElementsByClassName('carousel-image-wrapper')[0];
+  this.totalImages = this.wrapper.getElementsByTagName('img').length;
+  this.currentImageIndex = 1;
+  this.currentImagePosition = 0;
 
-function initCarousel() {
-  carouselWrapper.appendChild(carouselElement);
+  var that = this;
 
-  initData(carouselData);
-  applyStyle();
-  drawNavigationButtons();
-  drawPositionButtons();
-}
+  this.init = function (width, height) {
+    this.imageHeight = height;
+    this.imageWidth = width;
+    this.applyStyle();
+    this.drawIndicators();
+    this.drawNavigationButtons();
+  };
 
-function applyStyle() {
-  carouselWrapper.style.overflow = 'hidden';
-  carouselWrapper.style.margin = '30px auto';
-  carouselWrapper.style.boxShadow = '0px 0px 12px #111';
-  carouselWrapper.style.position = 'relative';
-  carouselWrapper.style.width = carouselWidth + 'px';
-  carouselWrapper.style.height = carouselHeight + 'px';
+  this.applyStyle = function () {
+    this.container.style.width = this.imageWidth + 'px';
+    this.container.style.height = this.imageHeight + 'px';
+    this.container.style.position = 'relative';
+    this.container.style.overflow = 'hidden';
+    this.container.style.margin = '30px auto';
+    this.container.style.boxShadow = '0px 0px 8px #444';
 
-  carouselElement.style.position = 'absolute';
-  carouselElement.style.left = '-' + currentCarouselPositionLeft + 'px';
-}
-
-function initData(carouselData) {
-  totalData = carouselData.length;
-
-  carouselElement.style.width = totalData * carouselWidth + 'px';
-
-  carouselData.forEach(function (singleData) {
-    carouselElement.appendChild(
-      createSingleSlideElement(singleData)
-    );
-  })
-}
-
-function createSingleSlideElement(imageSource) {
-  var outerLi = document.createElement('li');
-  var outerAnchor = document.createElement('a');
-  var image = document.createElement('img');
-
-  outerLi.style.display = 'inline-block';
-  outerLi.style.float = 'left';
-
-  outerAnchor.style.display = 'block';
-
-  image.style.width = carouselWidth + 'px';
-  image.style.height = carouselHeight + 'px';
-
-  outerAnchor.href = '#';
-  image.src = imageSource;
-
-  outerAnchor.appendChild(image);
-  outerLi.appendChild(outerAnchor);
-
-  return outerLi;
-}
-
-function drawNavigationButtons() {
-  var nextButton = document.createElement('img');
-  nextButton.style.position = 'absolute';
-  nextButton.style.right = '0px';
-  nextButton.style.top = '50%';
-  nextButton.style.height = '64px';
-  nextButton.style.width = '64px';
-  // nextButton.style.backgroundColor = 'red';
-  // nextButton.style.boxShadow = '0px 0px 8px #111';
-  nextButton.style.onMouseHover
-  nextButton.src = './images/navigation/next.png';
-
-  var prevButton = document.createElement('img');
-  prevButton.style.position = 'absolute';
-  prevButton.style.left = '0px';
-  prevButton.style.top = '50%';
-  prevButton.style.height = '64px';
-  prevButton.style.width = '64px';
-  // prevButton.style.backgroundColor = 'white';
-  // prevButton.style.boxShadow = '0px 0px 20px #111';
-  prevButton.src = './images/navigation/prev.png';
-
-  nextButton.addEventListener('click', function () { nextImage() });
-  prevButton.addEventListener('click', function () { prevImage() });
-
-  carouselWrapper.appendChild(nextButton)
-  carouselWrapper.appendChild(prevButton)
-}
-
-function drawPositionButtons() {
-  var buttons = document.createElement('div');
-  buttons.style.position = 'absolute';
-  buttons.style.height = '25px';
-  buttons.style.bottom = '10px';
-  buttons.style.width = '100%';
-  buttons.style.textAlign = 'center';
-  var ul = document.createElement('ul');
-
-  for (var i = 1; i <= totalData; i++) {
-    var li = document.createElement('li');
-    li.style.height = '25px';
-    li.style.width = '25px';
-    li.style.borderRadius = '100%';
-    li.style.backgroundColor = 'rgba(255,255,255,.7)';
-    li.style.display = 'inline-block';
-    li.style.margin = '0px 5px';
-    li.addEventListener(
-      "click",
-      (function (slideNo) {
-        return function () {
-          goToSlide(slideNo);
-        };
-      })(i)
-    );
-    ul.appendChild(li);
+    this.wrapper.style.width = this.totalImages * this.imageWidth + 'px';
+    this.wrapper.style.height = this.imageHeight + 'px';
+    this.wrapper.style.position = 'absolute';
+    this.wrapper.style.left = '0px';
   }
 
-  buttons.appendChild(ul);
-  carouselWrapper.appendChild(buttons);
+  this.updateImagePosition = function (position) {
+    this.wrapper.style.left = position + 'px';
+  }
+
+  this.drawNavigationButtons = function () {
+    var prevButton = document.createElement('div');
+    prevButton.style.display = 'inline-block';
+    prevButton.style.position = 'absolute';
+    prevButton.style.zIndex = '30';
+    prevButton.style.left = '0px';
+    prevButton.style.top = '50%';
+    prevButton.style.width = '64px';
+    prevButton.style.height = '64px';
+    prevButton.style.backgroundImage = 'url("images/navigation/prev.png")';
+    prevButton.style.backgroundSize = 'contain';
+
+    var nextButton = document.createElement('div');
+    nextButton.style.display = 'inline-block';
+    nextButton.style.position = 'absolute';
+    nextButton.style.zIndex = '30';
+    nextButton.style.right = '0px';
+    nextButton.style.top = '50%';
+    nextButton.style.width = '64px';
+    nextButton.style.height = '64px';
+    nextButton.style.backgroundImage = 'url("images/navigation/next.png")';
+    nextButton.style.backgroundSize = 'contain';
+
+    nextButton.addEventListener('click', function () { that.nextImage() });
+    prevButton.addEventListener('click', function () { that.prevImage() });
+
+    this.container.appendChild(prevButton);
+    this.container.appendChild(nextButton);
+  }
+
+  this.drawIndicators = function () {
+    var indicators = document.createElement('div');
+    indicators.style.position = 'absolute';
+    indicators.style.height = '20px';
+    indicators.style.width = '100%';
+    indicators.style.bottom = '10px';
+    indicators.style.textAlign = 'center';
+    var ul = document.createElement('ul')
+
+    for (var i = 1; i <= this.totalImages; i++) {
+      var li = document.createElement('li');
+      li.style.height = '10px';
+      li.style.width = '10px';
+      li.style.borderRadius = '100%';
+      li.style.border = '2px solid white';
+      li.style.display = 'inline-block';
+      li.style.margin = '0px 5px';
+      li.addEventListener(
+        "click",
+        (function (imageIndex) {
+          return function () {
+            that.goToImage(imageIndex);
+          };
+        })(i)
+      );
+      ul.appendChild(li);
+    }
+
+    indicators.appendChild(ul);
+    this.container.appendChild(indicators);
+  }
+
+  this.goToImage = function (newImageIndex) {
+    // this.resetAutoSlider();
+    var initialPosition = (1 - this.currentImageIndex) * this.imageWidth;
+
+    this.currentImageIndex = ((newImageIndex > this.totalImages) ? 1 : ((newImageIndex <= 0) ? this.totalImages : newImageIndex));
+
+    var finalPosition = (1 - this.currentImageIndex) * this.imageWidth;
+    console.log(initialPosition, finalPosition);
+    var tempPosition = initialPosition;
+    var speedOfSliding = Math.abs(initialPosition - finalPosition) / 100;
+
+    var slideAnimation = setInterval(function () {
+      if(speedOfSliding == 0) clearInterval(slideAnimation);
+      that.resetAutoSlider();
+      if (finalPosition > initialPosition) {
+        tempPosition += speedOfSliding;
+        if (finalPosition < tempPosition) {
+          clearInterval(slideAnimation);
+          that.updateImagePosition(finalPosition);
+          return;
+        }
+      } else {
+        tempPosition -= speedOfSliding;
+        if (finalPosition > tempPosition) {
+          clearInterval(slideAnimation);
+          that.updateImagePosition(finalPosition);
+          return;
+        }
+      }
+      that.updateImagePosition(tempPosition);
+    }, 1)
+
+  }
+
+  this.nextImage = function () {
+    this.goToImage(this.currentImageIndex + 1)
+  }
+
+  this.prevImage = function () {
+    this.goToImage(this.currentImageIndex - 1)
+  }
+
+  this.autoSlider = setInterval(function () {
+    that.nextImage()
+  }, 2000)
+
+  this.resetAutoSlider = function () {
+    clearInterval(this.autoSlider);
+    this.autoSlider = setInterval(function () {
+      that.nextImage()
+    }, 2000)
+  }
 }
-
-// console.log(currentCarouselIndex);
-
-function goToSlide(slideNo) {
-  currentCarouselIndex = ((slideNo > totalData) ? 1 : ((slideNo <= 0) ? totalData : slideNo));
-  currentCarouselPositionLeft = (currentCarouselIndex - 1) * carouselWidth;
-  console.log('index:', currentCarouselIndex);
-  applyStyle();
-}
-
-function nextImage() {
-  // console.log(currentCarouselIndex);
-  goToSlide(currentCarouselIndex + 1);
-}
-
-function prevImage() {
-  // console.log(currentCarouselIndex);
-  goToSlide(currentCarouselIndex - 1);
-}
-
-initCarousel();
-
-setInterval(function () {
-  nextImage();
-}, 3000)

@@ -9,25 +9,12 @@
   clear: both;
 }
 
-.carousel-container {
-  position: relative;
-  width: 1280px;
-  height: 720px;
-  overflow: hidden;
-  margin: 30px auto;
-}
-
 h1 {
   text-align: center;
   font-size: 64px;
 }
 
-.carousel-image-wrapper {
-  position: absolute;
-  /* height: 720px; */
-}
-
-.carousel-image-wrapper figure {
+.carousel-image-wrapper img {
+  display: block;
   float: left;
-  display: inline-block;
 }
