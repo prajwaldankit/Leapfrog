@@ -104,13 +104,13 @@ function Carousel(carouselContainer) {
     var finalPosition = (1 - this.currentImageIndex) * this.imageWidth;
     console.log(initialPosition, finalPosition);
     var tempPosition = initialPosition;
-    var speedOfSliding = Math.abs(initialPosition - finalPosition) / 100;
+    var speedOfSliding = (initialPosition - finalPosition) / 100;
 
     var slideAnimation = setInterval(function () {
       if(speedOfSliding == 0) clearInterval(slideAnimation);
       that.resetAutoSlider();
       if (finalPosition > initialPosition) {
-        tempPosition += speedOfSliding;
+        tempPosition -= speedOfSliding;
         if (finalPosition < tempPosition) {
           clearInterval(slideAnimation);
           that.updateImagePosition(finalPosition);
