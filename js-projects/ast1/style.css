@@ -18,3 +18,7 @@ h1 {
   display: block;
   float: left;
 }
+
+li:hover {
+  background-color: white;
+}
