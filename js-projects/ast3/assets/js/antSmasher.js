@@ -1,9 +1,9 @@
 var MAX_HEIGHT = 800;
 var MAX_WIDTH = 1000;
 var MIN_SPEED = 2;
-var MAX_SPEED = 5;
-var MIN_BOX_SIZE = 10;
-var MAX_BOX_SIZE = 10;
+var MAX_SPEED = 2;
+var MIN_BOX_SIZE = 45;
+var MAX_BOX_SIZE = 45;
 // class to create box container
 
 function BoxContainer(rootElement, boxCount) {
@@ -30,7 +30,7 @@ function BoxContainer(rootElement, boxCount) {
     this.container.style.height = MAX_HEIGHT + 'px';
     this.container.style.position = 'relative';
     this.container.style.margin = '30px auto';
-    this.container.style.backgroundColor = '#999999';
+    this.container.style.backgroundColor = 'yellow';
     this.container.style.border = '1px solid black';
   }
 
@@ -43,10 +43,11 @@ function BoxContainer(rootElement, boxCount) {
         this.getStartingPosition(box).xPosition,
         this.getStartingPosition(box).yPosition
       );
-      console.log('checking', i)
+      // console.log('checking', i)
       var checkingPosition = this.checkCollisionForInitialPosition(box);
       if (!checkingPosition) {
-        console.log('accepted', i);
+        // console.log('accepted', i);
+
         boxes.push(box);
         i++;
       }
@@ -59,7 +60,7 @@ function BoxContainer(rootElement, boxCount) {
 
     setInterval(function () {
       that.moveBoxes();
-    }, 16)
+    }, 100)
   }
 
   this.moveBoxes = function () {
@@ -154,6 +155,7 @@ function Box(container) {
   this.height = this.width;
   this.toRight = getRandomBool();
   this.toBottom = getRandomBool();
+  var that = this;
 
   this.init = function () {
     this.createBox();
@@ -171,7 +173,10 @@ function Box(container) {
     this.element.style.width = this.width + 'px';
     this.element.style.height = this.height + 'px';
     this.element.style.position = 'absolute';
-    this.element.style.backgroundColor = getRandomColor();
+    this.element.style.backgroundColor = 'black';
+    this.element.addEventListener('click', function() {
+      that.element.style.backgroundColor = 'green';
+    })
   }
 
   this.setPosition = function (x, y) {

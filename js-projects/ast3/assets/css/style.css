@@ -2,17 +2,7 @@
   margin: 0;
   padding: 0;
 }
-
-/* .app {
-  height: 800px;
-  width: 1000px;
-  margin: 30px auto;
-  background: #dfdfdf;
-  border: 2px solid black;
-  position: relative;
+h1{
+  text-align: center;
+  font-size: 64px;
 }
-
-.box {
-  background: red;
-  position: absolute;
-} */
