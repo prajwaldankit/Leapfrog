@@ -1,7 +1,7 @@
 var MAX_HEIGHT = 800;
 var MAX_WIDTH = 1000;
-var MIN_SPEED = 2;
-var MAX_SPEED = 2;
+var MIN_SPEED = 1;
+var MAX_SPEED = 1;
 var MIN_BOX_SIZE = 45;
 var MAX_BOX_SIZE = 45;
 // class to create box container
@@ -60,7 +60,7 @@ function BoxContainer(rootElement, boxCount) {
 
     setInterval(function () {
       that.moveBoxes();
-    }, 100)
+    }, 16)
   }
 
   this.moveBoxes = function () {
