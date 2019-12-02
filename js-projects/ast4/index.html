@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Assignment 4: Car Game With Bullet Implementation</title>
+</head>
+
+<body>
+  <h1>Car Game With Bullet Implementaion</h1>
+  <div class="car-race">
+    <div class="info" id="info">
+      <h2>High Score: <span id="highScore"></span></h2>
+      <h2>Longest Distance Travelled: <span id="longestDistanceTravelled"></span></h2>
+      <div>Score:<span id="score"></span></div>
+      <div>Distance Travelled:<span id="distanceTravelled"></span></div>
+      <div>Speed: <span id="speed"></span></div>
+      <div id="Message">
+        <div id="highscore"></div>
+        <div id="longestdistance"></div>
+      </div>
+      <div class="instruction">Use A/D or Left/Right Key to move Left/Right</div>
+    </div>
+
+    <div class="container-lane" id="containerLane">
+      <div class="container-strips" id="containerStrips">
+        <div class="game-pause-play" id="game-pause-play">
+          <button id="play-btn">Play</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="assets/js/constants.js"></script>
+<script src="assets/js/style.js"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/Car.js"></script>
+<script src="assets/js/GameAnimation.js"></script>
+<script>
+  var parentElement = document.getElementById('containerStrips');
+  var gameAnimation = new GameAnimation(120, parentElement);
+
+  window.addEventListener("keydown", gameAnimation.moveCar);
+
+  var pauseRestartButton = document.getElementById('play-btn');
+  pauseRestartButton.addEventListener("click", playRestart);
+</script>
+
+</html>

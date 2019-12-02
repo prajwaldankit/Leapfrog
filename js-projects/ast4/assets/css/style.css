@@ -1,0 +1,53 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: bisque;
+}
+
+h1 {
+  text-align: center;
+  font-size: 64px;
+}
+
+.car-race {
+  margin: 30 auto;
+}
+
+.info {
+  padding: 30px;
+  font-size: 16px;
+  ;
+  vertical-align: top;
+}
+
+
+.instruction {
+  font-weight: bold;
+}
+
+.container-lane {
+  margin: 0px auto;
+}
+
+.car-race .info,
+.car-race .container-lane {
+  display: block;
+}
+
+.game-pause-play {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 30;
+  padding: 80% 0 0 40%;
+  background-color: black;
+}
+
+.game-pause-play button {
+  background-color: whitesmoke;
+  padding: 15px;
+  margin: 0 auto;
+}
