@@ -1,15 +1,15 @@
 //create the  container with styles
-var containerLane = document.getElementById('containerLane');
-containerLane.style.height = CONTAINER_HEIGHT + 'px';
-containerLane.style.width = CONTAINER_WIDTH + 'px';
-containerLane.style.backgroundColor = '#000';
-containerLane.style.overflow = 'hidden';
+var container = document.getElementById('container');
+container.style.height = CONTAINER_HEIGHT + 'px';
+container.style.width = CONTAINER_WIDTH + 'px';
+container.style.backgroundColor = '#000';
+container.style.overflow = 'hidden';
 
 
-var containerStrips = document.getElementById('containerStrips');
-containerStrips.style.position = 'relative';
-containerStrips.style.height = '100%';
-containerStrips.style.width = '100%';
-containerStrips.style.backgroundImage = 'url("./assets/images/roadstripe.png")';
-containerStrips.style.backgroundSize = '100%';
-containerStrips.style.backgroundRepeat = 'repeat-y';
+var gameWrapper = document.getElementById('gameWrapper');
+gameWrapper.style.position = 'relative';
+gameWrapper.style.height = '100%';
+gameWrapper.style.width = '100%';
+gameWrapper.style.backgroundImage = 'url("./assets/images/roadstripe.png")';
+gameWrapper.style.backgroundSize = '100%';
+gameWrapper.style.backgroundRepeat = 'repeat-y';

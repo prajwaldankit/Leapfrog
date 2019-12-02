@@ -7,7 +7,7 @@ function GameAnimation(fps, parentElement) {
   var objectGenerationRate = CAR_HEIGHT * 3 + 20;
   var distanceTravelled = 0;
   var highScore = localStorage.getItem("highScore") || 0;
-  var longestDistanceTravelled = localStorage.getItem("longestDistanceTravelled") || 0;
+  var highestDistance = localStorage.getItem("highestDistance") || 0;
 
   fps = fps || GAME_ANIMATION_SPEED_FPS;
   var start = 0,
@@ -31,7 +31,7 @@ function GameAnimation(fps, parentElement) {
     objectGenerationRate = CAR_HEIGHT * 3 + 20;
     distanceTravelled = 0;
     highScore = localStorage.getItem("highScore") || 0;
-    longestDistanceTravelled = localStorage.getItem("longestDistanceTravelled") || 0;
+    highestDistance = localStorage.getItem("highestDistance") || 0;
     gameSpeed = GAME_SPEED;
     
     var playRestartElement = parentElement.firstElementChild;
@@ -70,7 +70,7 @@ function GameAnimation(fps, parentElement) {
       if (timestamp >= start) {
         this.createObstacles();
         this.moveBackgroundImageAndObstacles();
-        displayScoreAndInfo(highScore, longestDistanceTravelled, score, distanceTravelled, gameSpeed);
+        displayScoreAndInfo(highScore, highestDistance, score, distanceTravelled, gameSpeed);
 
         start = timestamp + frameDuration;
       }
@@ -80,10 +80,10 @@ function GameAnimation(fps, parentElement) {
       window.cancelAnimationFrame(animationFrameVariable);
       clearInterval(speedIntervalVariable);
 
-      setHighScoreIfHighest(highScore, score, longestDistanceTravelled, distanceTravelled);
+      setHighScoreIfHighest(highScore, score, highestDistance, distanceTravelled);
 
-      pauseRestartButton.parentNode.style.display = 'block';
-      pauseRestartButton.innerHTML = 'Restart';
+      startRestartBtn.parentNode.style.display = 'block';
+      startRestartBtn.innerHTML = 'Restart';
     }
   };
 
