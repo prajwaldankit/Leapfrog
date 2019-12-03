@@ -1,9 +1,12 @@
 var CAR_HEIGHT = 100;
-var CAR_WIDTH = 55;
-var GAME_ANIMATION_SPEED_FPS = 60;
-var CONTAINER_WIDTH = 300;
-var CONTAINER_HEIGHT = 650;
-var GAME_SPEED = 1;
+var CAR_WIDTH = 60;
+var GAME_SPEED = 60;
+var MAX_WIDTH = 400;
+var MAX_HEIGHT = 600;
+var GAME_SPEED = 3;
+
+const BULLET_LIFE = 2;
+const BULLET_SPEED = 150;
 
 var OBSTACLES = [
   './assets/images/cars/car_1.png',
@@ -12,9 +15,9 @@ var OBSTACLES = [
 
 var ROAD_LANES =
 {
-  'firstLane': 25,
-  'middleLane': 130,
-  'lastLane': 225
+  'firstLane': 39,
+  'middleLane': 175,
+  'lastLane': 305
 };
 
-var ROAD_LANES_VALUES = Object.values(ROAD_LANES);
+var ROAD_DISTANCE = Object.values(ROAD_LANES);

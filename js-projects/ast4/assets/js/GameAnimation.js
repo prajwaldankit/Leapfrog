@@ -9,7 +9,7 @@ function GameAnimation(fps, parentElement) {
   var highScore = localStorage.getItem("highScore") || 0;
   var highestDistance = localStorage.getItem("highestDistance") || 0;
 
-  fps = fps || GAME_ANIMATION_SPEED_FPS;
+  fps = fps || GAME_SPEED;
   var start = 0,
     frameDuration = 1000 / fps;
   var animationFrameVariable = 0;
@@ -26,7 +26,7 @@ function GameAnimation(fps, parentElement) {
     obstacleCars = [];
     userCar = null;
     carCollision = false;
-    currentLane = 1;
+    currentLane = 2;
     score = 0;
     objectGenerationRate = CAR_HEIGHT * 3 + 20;
     distanceTravelled = 0;
@@ -44,11 +44,11 @@ function GameAnimation(fps, parentElement) {
   };
 
   this.generateUserCar = function () {
-    var xAxis = ROAD_LANES_VALUES[currentLane];
-    var yAxis = CONTAINER_HEIGHT - CAR_HEIGHT - 10;
+    var xAxis = ROAD_DISTANCE[currentLane];
+    var yAxis = MAX_HEIGHT - CAR_HEIGHT - 10;
     userCar = new Car(xAxis, yAxis, parentElement);
 
-    userCar.init('./assets/images/myCar.png');
+    userCar.init('./assets/images/cars/myCar.png');
     userCar.draw();
   };
 
@@ -117,7 +117,7 @@ function GameAnimation(fps, parentElement) {
         carCollision = true;
       }
 
-      if (obstacleCars[i].y > CONTAINER_HEIGHT) {
+      if (obstacleCars[i].y > MAX_HEIGHT) {
         obstacleCars[i].clearCar();
         isCarOutOfBoundary = true;
         score += 1;
@@ -135,18 +135,18 @@ function GameAnimation(fps, parentElement) {
     if (!carCollision) {
       if (event.code == "KeyA" || event.code == "ArrowLeft") {
         if (currentLane > 0) {
-          if (userCar.x <= ROAD_LANES_VALUES[currentLane]) {
+          if (userCar.x <= ROAD_DISTANCE[currentLane]) {
             currentLane--;
-            userCar.x = ROAD_LANES_VALUES[currentLane];
+            userCar.x = ROAD_DISTANCE[currentLane];
             userCar.draw();
           }
         }
       }
       if (event.code == "KeyD" || event.code == "ArrowRight") {
-        if (currentLane < (ROAD_LANES_VALUES.length - 1)) {
-          if (userCar.x <= ROAD_LANES_VALUES[currentLane]) {
+        if (currentLane < (ROAD_DISTANCE.length - 1)) {
+          if (userCar.x <= ROAD_DISTANCE[currentLane]) {
             currentLane++;
-            userCar.x = ROAD_LANES_VALUES[currentLane];
+            userCar.x = ROAD_DISTANCE[currentLane];
             userCar.draw();
           }
         }

@@ -29,7 +29,7 @@ h1 {
 }
 
 .container-lane {
-  margin: 0px auto;
+  margin: 0 auto 30px auto;
 }
 
 .car-race .info,

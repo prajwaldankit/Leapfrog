@@ -7,9 +7,9 @@ function getRandom(min, max) {
 function generateObstacle(parentElement) {
   var obstacleImagePosition = getRandom(0, (OBSTACLES.length - 1));
   var obstacleImage = OBSTACLES[obstacleImagePosition];
-  var lane = getRandom(0, ROAD_LANES_VALUES.length - 1);
+  var lane = getRandom(0, ROAD_DISTANCE.length - 1);
 
-  var car = new Car(ROAD_LANES_VALUES[lane], 0, parentElement);
+  var car = new Car(ROAD_DISTANCE[lane], 0, parentElement);
   car.init(obstacleImage);
   car.draw();
   return car;
