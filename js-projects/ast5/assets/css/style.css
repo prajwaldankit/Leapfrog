@@ -1,0 +1,10 @@
+h1{
+  font-size: 64px;
+  text-align: center;
+}
+
+.game-base {
+  background-image: url('../images/base.png');
+  height: 112px;
+  background-repeat: repeat-x;
+}
