@@ -17,7 +17,8 @@ class Pipe {
     this.pipeImage.src = this.pipeUrl;
     this.minTopPipeHeight = 60;
     this.minBottompPipeHeight = 60;
-    this.y = Math.floor(Math.random() * (400 - this.minBottompPipeHeight - VERTICAL_GAP)) + this.minTopPipeHeight;
+    //has to come from random
+    // this.y =  + this.minTopPipeHeight;
     this.x = undefined;
     this.frameNumber = 0;
     this.context = context;
