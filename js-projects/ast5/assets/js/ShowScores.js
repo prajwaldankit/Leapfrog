@@ -1,14 +1,14 @@
 /**
  *
  *
- * @class ScoreDisplay
+ * @class ShowScores
  */
-class ScoreDisplay {
+class ShowScores {
   /**
-   *Creates an instance of ScoreDisplay.
+   *Creates an instance of ShowScores.
    * @param {*} context
    * @param {*} dimension
-   * @memberof ScoreDisplay
+   * @memberof ShowScores
    */
   constructor(context, dimension) {
     this.score = 0;
@@ -28,26 +28,9 @@ class ScoreDisplay {
   /**
    *
    *
-   * @returns
-   * @memberof ScoreDisplay
-   */
-  getDisplayWidth() {
-    let width = 0;
-    this.score.toString().split('').map(Number).forEach((digit) => {
-      if (digit === 1)
-        width += 16;
-      else
-        width += 24;
-    });
-    return this.score.toString().length * 24;
-  }
-
-  /**
-   *
-   *
    * @param {*} images
    * @returns
-   * @memberof ScoreDisplay
+   * @memberof ShowScores
    */
   preloadImages(images) {
     let tempImages = [];
@@ -65,7 +48,7 @@ class ScoreDisplay {
    *
    *
    * @param {*} gameOver
-   * @memberof ScoreDisplay
+   * @memberof ShowScores
    */
   display(gameOver) {
     // for game over 
@@ -75,25 +58,21 @@ class ScoreDisplay {
    *
    *
    * @param {*} number
-   * @memberof ScoreDisplay
+   * @memberof ShowScores
    */
   drawDigits(number) {
-    let digits = number.toString().split('').map(Number);
-    digits.forEach((digit) => {
-      this.context.drawImage(this.images[digit], this.x, this.y, ((digit === 1) ? 16 : 24), 36);
-      this.x += (digit === 1) ? 16 : 24;
-    });
+    // for socres/
   }
 
   /**
    *
    *
    * @param {*} newScore
-   * @memberof ScoreDisplay
+   * @memberof ShowScores
    */
   updateScore(newScore) {
     this.score = newScore;
-    this.highScore.setIfHighest(this.score);
+    this.highScore.setHighScore(this.score);
     this.display();
   }
 
@@ -104,7 +83,7 @@ class ScoreDisplay {
    * @param {*} y
    * @param {*} width
    * @param {*} height
-   * @memberof ScoreDisplay
+   * @memberof ShowScores
    */
   roundRect(x, y, width, height) {
     // make the button here
@@ -113,7 +92,7 @@ class ScoreDisplay {
   /**
    *
    *
-   * @memberof ScoreDisplay
+   * @memberof ShowScores
    */
   drawButton() {
     // make buttons here

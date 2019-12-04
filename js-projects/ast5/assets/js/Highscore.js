@@ -18,7 +18,7 @@ class HighScore {
    * @param {*} score
    * @memberof HighScore
    */
-  setIfHighest(score) {
+  setHighScore(score) {
     if (score > this.getHighScore()) {
       localStorage.setItem("highScore", score);
     }

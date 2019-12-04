@@ -46,7 +46,7 @@ class Game {
     self.initBackground();
     self.initBird();
     self.initBase();
-    self.initScoreDisplay(self.context, self.getCanvasDimension());
+    self.initShowScores(self.context, self.getCanvasDimension());
     self.intervalRef = setInterval(() => { self.startGame() }, 10);
   }
   /**
@@ -136,27 +136,6 @@ class Game {
   /**
    *
    *
-   * @param {*} e
-   * @memberof Game
-   */
-  canvasClicked(e) {
-    if (this.gameStatus == "gamestart") {
-      this.bird.setFallDownStatus(true);
-      this.gameStatus = "playing";
-    }
-    if (this.gameStatus === "playing") {
-      this.bird.fly();
-    }
-
-    if (this.gameStatus === "gameover") {
-      this.restartGame();
-      this.gameStatus = "gamestart";
-    }
-  }
-
-  /**
-   *
-   *
    * @memberof Game
    */
   initCanvas() {
@@ -170,9 +149,27 @@ class Game {
     this.element.onclick = (e) => {
       this.canvasClicked(e);
     }
-
-
   }
+  /**
+   *
+   *
+   * @param {*} e
+   * @memberof Game
+   */
+  canvasClicked(e) {
+    if (this.gameStatus == "gamestart") {
+      this.bird.setFallDownStatus(true);
+      this.gameStatus = "playing";
+    }
+    if (this.gameStatus === "playing") {
+      this.bird.fly();
+    }
+    if (this.gameStatus === "gameover") {
+      this.restartGame();
+      this.gameStatus = "gamestart";
+    }
+  }
+
 
   /**
    *
@@ -245,8 +242,8 @@ class Game {
    *
    * @memberof Game
    */
-  initScoreDisplay() {
-    this.scoreDisplay = new ScoreDisplay(this.context, this.getCanvasDimension());
+  initShowScores() {
+    this.scoreDisplay = new ShowScores(this.context, this.getCanvasDimension());
   }
 
   /**
