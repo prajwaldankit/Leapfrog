@@ -104,11 +104,11 @@ class Game {
    * @param {*} stop
    * @memberof Game
    */
-  updatePipes(stop) {
+  updatePipes(pos) {
     let birdDimension = this.bird.getDimensions();
     if (this.pipes.length > 0) {
       this.pipes.forEach((pipe) => {
-        pipe.drawPipe(stop);
+        pipe.drawPipe(pos);
         if (this.gameStatus == "playing") {
           let pipeDimension = pipe.getDimension();
           if ((birdDimension.x >= pipeDimension.x && birdDimension.x <= pipeDimension.x + pipeDimension.width) || (birdDimension.x + birdDimension.width >= pipeDimension.x && birdDimension.x + birdDimension.width <= pipeDimension.x + pipeDimension.width)) {
@@ -270,13 +270,11 @@ class Game {
     var img = new Image();
     if (this.gameStatus == "gamestart") {
       img.src = GAME_START;
-      this.context.drawImage(img, (this.getCanvasDimension().width - 187) / 2, this.getCanvasDimension().height * 0.1, 187, 264);
 
     } else if (this.gameStatus == "playing") {
 
     } else if (this.gameStatus === "gameover") {
       img.src = GAME_OVER;
-      this.context.drawImage(img, (this.getCanvasDimension().width - 192) / 2, this.getCanvasDimension().height * 0.1, 192, 42);
     }
   }
 

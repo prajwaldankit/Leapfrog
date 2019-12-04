@@ -40,4 +40,14 @@ class Random {
     let birdColor = BIRD_COLOR[birdIndex];
     return BIRDS_IMAGES[birdColor];
   }
+
+  /**
+   *
+   *
+   * @memberof Random
+   */
+  getRandomPipePosition = (min, max) => {
+    let pipePosition = this.getRandom(min, max);
+    return pipePosition;
+  }
 }
