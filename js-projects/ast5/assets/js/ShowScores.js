@@ -68,35 +68,7 @@ class ScoreDisplay {
    * @memberof ScoreDisplay
    */
   display(gameOver) {
-
-    if (gameOver) {
-
-      this.drawButton();
-
-      this.roundRect(10, this.canvasDimension.height * 0.3, this.canvasDimension.width - (10 * 2), 150);
-
-      this.x = this.canvasDimension.width - 100;
-      this.y = this.canvasDimension.height * 0.3 + 20;
-      this.drawDigits(this.score);
-
-      this.x = this.canvasDimension.width - 100;
-      this.y = this.canvasDimension.height * 0.3 + 85;
-      this.drawDigits(this.highScore.getHighScore());
-
-      this.context.fillStyle = "rgb(201,191,80)";
-      this.context.fillText("SCORE", 30, this.canvasDimension.height * 0.3 + 45);
-
-      this.context.fillStyle = "rgb(201,191,80)";
-      this.context.fillText("BEST", 30, this.canvasDimension.height * 0.3 + 110);
-
-    } else {
-      this.x = (this.canvasDimension.width - this.getDisplayWidth()) / 2;
-      this.y = this.canvasDimension.height * 0.1;
-      this.drawDigits(this.score);
-    }
-
-
-
+    // for game over 
   }
 
   /**
