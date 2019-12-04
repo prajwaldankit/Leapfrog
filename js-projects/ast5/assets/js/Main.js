@@ -17,4 +17,4 @@ class Games{
   }
 }
 const gameContainers = document.getElementsByClassName('game-container');
-new Games('game-container');
+new Games(gameContainers);

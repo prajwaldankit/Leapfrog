@@ -121,6 +121,8 @@ class Game {
           if (this.gameStatus === "playing" && (birdDimension.x >= pipeDimension.x + pipeDimension.width)) {
             if (!pipe.getPassedBird()) {
               this.score++;
+              console.log(this.score);
+              // scoreElement.innerHTML = `${this.score}`;
               pipe.updatePassedBird();
             }
           }
@@ -142,7 +144,6 @@ class Game {
     this.element = document.createElement('canvas');
     this.element.height = GAME_HEIGHT;
     this.element.width = GAME_WIDTH;
-    this.element.style.margin = "0px auto";
     this.context = this.element.getContext('2d')
     this.parent.appendChild(this.element);
 
@@ -159,12 +160,15 @@ class Game {
   canvasClicked(e) {
     if (this.gameStatus == "gamestart") {
       this.bird.setFallDownStatus(true);
+      console.log('game starting');
       this.gameStatus = "playing";
     }
     if (this.gameStatus === "playing") {
+      console.log('game playing');
       this.bird.fly();
     }
     if (this.gameStatus === "gameover") {
+      console.log('game over');
       this.restartGame();
       this.gameStatus = "gamestart";
     }

@@ -5,9 +5,9 @@ const GAME_WIDTH = 288;
 const GAME_HEIGHT = 512;
 const BASE_HEIGHT = 112;
 const PIPE_WIDTH = 52;
-const VERTICAL_GAP = 80;
+const VERTICAL_GAP = 150;
 const HORIZONTAL_GAP = 250;
-const GRAVITY = .2;
+const GRAVITY = .1;
 const BIRDS_IMAGES = {
   red: [
     'assets/images/redbird-downflap.png',
@@ -53,4 +53,4 @@ const MESSAGE_IMAGE = 'assets/images/message.png';
 const BASE_IMAGE = 'assets/images/base.png';
 const GAME_OVER = 'assets/images/gameover.png';
 const GAME_START = 'assets/images/message.png';
-
+const scoreElement = document.getElementById('score');
