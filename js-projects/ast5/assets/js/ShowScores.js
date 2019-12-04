@@ -135,24 +135,7 @@ class ScoreDisplay {
    * @memberof ScoreDisplay
    */
   roundRect(x, y, width, height) {
-    var radius = { tl: 5, tr: 5, br: 5, bl: 5 };
-
-    this.context.lineWidth = 3;
-    this.context.fillStyle = "rgb(222,216,149)";
-    this.context.strokeStyle = "rgb(201,191,80)";
-    this.context.beginPath();
-    this.context.moveTo(x + radius.tl, y);
-    this.context.lineTo(x + width - radius.tr, y);
-    this.context.quadraticCurveTo(x + width, y, x + width, y + radius.tr);
-    this.context.lineTo(x + width, y + height - radius.br);
-    this.context.quadraticCurveTo(x + width, y + height, x + width - radius.br, y + height);
-    this.context.lineTo(x + radius.bl, y + height);
-    this.context.quadraticCurveTo(x, y + height, x, y + height - radius.bl);
-    this.context.lineTo(x, y + radius.tl);
-    this.context.quadraticCurveTo(x, y, x + radius.tl, y);
-    this.context.closePath();
-    this.context.fill();
-    this.context.stroke();
+    // make the button here
   }
 
   /**
@@ -161,14 +144,6 @@ class ScoreDisplay {
    * @memberof ScoreDisplay
    */
   drawButton() {
-    this.roundRect(10, (this.canvasDimension.height * 0.3) + 170, this.canvasDimension.width - (10 * 2), 50);
-
-    this.context.fillStyle = "rgb(201,191,80)";
-    this.context.beginPath();
-    this.context.moveTo(this.canvasDimension.width / 2 + 10, (this.canvasDimension.height * 0.3) + 195);
-    this.context.lineTo(this.canvasDimension.width / 2 - 10, (this.canvasDimension.height * 0.3) + 185);
-    this.context.lineTo(this.canvasDimension.width / 2 - 10, (this.canvasDimension.height * 0.3) + 205);
-    this.context.closePath();
-    this.context.fill();
+    // make buttons here
   }
 }

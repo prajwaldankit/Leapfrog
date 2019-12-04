@@ -46,11 +46,6 @@ class Bird {
     this.gravity = GRAVITY;
     this.upthrust = GRAVITY;
 
-    this.rotateDeg = 0;
-    this.maxDeg = 60;
-    this.minDeg = -60;
-
-
     this.deltaY = 50;
     this.prevY;
   }
@@ -84,7 +79,6 @@ class Bird {
     this.falldown = true;
     this.isFalling = false;
     this.prevY = this.y;
-    this.rotateDeg = 1;
   }
 
   /**
@@ -121,7 +115,6 @@ class Bird {
   drawIntoCanvas(context) {
     context.save();
     context.translate(this.x + (this.birdWidth / 2), this.y + (this.birdWidth / 2));
-    context.rotate(this.rotateDeg * (Math.PI / 180));
     context.drawImage(this.frameImage, -(this.birdWidth / 2), -(this.birdWidth / 2), this.birdWidth, this.birdHeight);
     context.restore();
   }
@@ -147,19 +140,7 @@ class Bird {
    * @memberof Bird
    */
   changeRotateDeg() {
-    if (this.rotateDeg >= this.maxDeg) {
-      this.rotateDeg = this.maxDeg;
-    } else if (this.rotateDeg <= this.minDeg) {
-      this.rotateDeg = this.minDeg;
-    }
-
-    if (this.falldown) {
-      if (this.isFalling && !this.hasFallen) {
-        this.rotateDeg += 1;
-      } else if (!this.isFalling && !this.hasFallen) {
-        this.rotateDeg -= 1;
-      }
-    }
+    //make rotaion
   }
 
   /**
