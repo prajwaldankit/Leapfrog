@@ -149,11 +149,8 @@ class Game {
     }
 
     if (this.gameStatus === "gameover") {
-      if (e.layerX > 10 && e.layerX < this.getCanvasDimension().width - 10) {
-        if (e.layerY > (this.getCanvasDimension().height * 0.3) + 170 && e.layerY < (this.getCanvasDimension().height * 0.3) + 220) {
-          this.restartGame();
-        }
-      }
+      this.restartGame();
+      this.gameStatus = "gamestart";
     }
   }
 

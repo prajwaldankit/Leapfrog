@@ -7,7 +7,7 @@ const BASE_HEIGHT = 112;
 const PIPE_WIDTH = 52;
 const VERTICAL_GAP = 80;
 const HORIZONTAL_GAP = 250;
-const GRAVITY = 0.1;
+const GRAVITY = .2;
 const BIRDS_IMAGES = {
   red: [
     'assets/images/redbird-downflap.png',
