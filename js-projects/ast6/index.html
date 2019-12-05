@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment 6: Helix Animation</title>
+</head>
+
+<body>
+  <div class="helix-container"></div>
+  <script src="assets/js/main.js"></script>
+  <script>
+    const helixContainers = document.getElementsByClassName('helix-container');
+    for (let i = 0; i < helixContainers.length; i++) {
+      let helix = new Helix (helixContainers[i]);
+      // setInterval(helix, 100)
+    }
+  </script>
+</body>
+
+</html>
