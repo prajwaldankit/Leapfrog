@@ -24,10 +24,10 @@ class Helix {
     this.numStrands = 2;
     this.y;
     // this.drawHelix();
-    requestAnimationFrame(this.drawHelix.bind(this));
-    
+    window.requestAnimationFrame(this.drawHelix.bind(this));
+
   }
-  
+
   /**
    *
    *
@@ -48,17 +48,22 @@ class Helix {
     this.canvas.width = '700';
     this.canvas.height = '400';
   }
-  
+
   /**
    *
    *
    * @memberof Helix
    */
-  drawHelix = ()=> {
+  drawHelix = () => {
+    this.context.clearRect(0, 0, 700, 400);
     let x = 0;
     let colOffset = 0;
     this.frameCount++;
-    console.log('framenumber',this.frameCount);
+
+    if (true) {
+      window.requestAnimationFrame(this.drawHelix.bind(this));
+    }
+    console.log('framenumber', this.frameCount);
     this.phase = this.frameCount * this.speed;
     for (let count = 0; count < this.numStrands; count++) {
       // console.log('firstloop')
@@ -72,7 +77,7 @@ class Helix {
         // console.log('secondloop')
         x = x + 10;
         colOffset = (col) / 5;
-        
+
         for (let row = 0; row < this.numRows; row += 1) {
           // console.log('thirdloop')
           let y = this.canvas.height / 2 + row * 10 + Math.sin(this.strandPhase + colOffset) * 50;
